@@ -1,9 +1,7 @@
 {
     "instance_dir": "instances",
     "instances": [
-        "Instance_40_1.mat",
-        "Instance_40_2.mat",
-        "Instance_40_3.mat"
+        "Instance_200_1.mat"
     ],
     "known_results_dir": "known_results",
     "results_dir": "results",
@@ -14,11 +12,11 @@
     "num_processes": 1,
     "silent": true,
     "stop_on_target": true,
-    "stop_target": -1.65,
-    "max_generations": [20000],
-    "max_generations_without_change": 10000,
-    "max_time": 3600,
-    "max_time_without_change": 1800,
+    "stop_target": -1.85094381046343,
+    "max_generations": [30000],
+    "max_generations_without_change": 0,
+    "max_time": 1800,
+    "max_time_without_change": 0,
     "population_size": [100],
     "encoding_method": ["binary"],
     "initialization_method": ["random"],

@@ -181,6 +181,9 @@ class GeneticAlgoritm:
             if self.stop_execution(generation):
                 break
 
+            if (generation % 1000) == 0:
+                print(time.time() - self.start_time, generation, self.best_sol, self.stop_target)
+
         # ===========================================================================================
 
         # Performs path relinking and local search
