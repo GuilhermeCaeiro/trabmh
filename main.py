@@ -139,6 +139,8 @@ def build_experiments(experiment_setup):
                 "s": s,
                 "best_known_result": float(best_known_result),
                 "generate_plots": bool(experiment_setup["generate_plots"]),
+                "stop_on_target": bool(experiment_setup["stop_on_target"]),
+                "stop_target": float(experiment_setup["stop_target"]),
                 "max_generations": int(max_generations),
                 "max_generations_without_change": int(experiment_setup["max_generations_without_change"]),
                 "max_time": int(experiment_setup["max_time"]),

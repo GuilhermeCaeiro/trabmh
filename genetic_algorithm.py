@@ -80,6 +80,8 @@ class GeneticAlgoritm:
         self.local_search_method = experiment["local_search_method"]
         self.max_time_local_search = experiment["max_time_local_search"]
         self.perform_local_search = experiment["perform_local_search"]
+        self.stop_on_target = experiment["stop_on_target"]
+        self.stop_target = experiment["stop_target"]
         
         if self.seed == 0:
             self.seed = random.randint(0, 1000000)
@@ -253,6 +255,9 @@ class GeneticAlgoritm:
         self.generations_since_last_change = current_generation + 1 - self.best_sol_change_generations[-1]
 
     def stop_execution(self, current_generation):
+        if self.stop_on_target and self.best_sol > self.stop_target:
+            self.stop_message ="Target solution reached."
+            return True
 
         if current_generation == self.max_generations - 1:
             self.stop_message ="Maximum number of generations reached."
